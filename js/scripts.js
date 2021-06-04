@@ -2,9 +2,10 @@
 let javascript = 0;
 let ruby = 0;
 let csharp= 0;
+let anything=0;
 
-function languageSelector() {
-  
+function languageSelector(workStyleNum) {
+  return parseInt($('input:radio[name=workStyleQuestion'+ workStyleNum + ']:checked').val());
 }
 
 
@@ -16,22 +17,22 @@ $(document).ready(function() {
     $('#results').show();
     $('#workStyle').hide();
 
-    const workStyleInput1 = parseInt($('input:radio[name=workStyleQuestion1]:checked').val());
-    const workStyleInput2 = parseInt($('input:radio[name=workStyleQuestion2]:checked').val());
-    const workStyleInput3 = parseInt($('input:radio[name=workStyleQuestion3]:checked').val());
-    const workStyleInput4 = parseInt($('input:radio[name=workStyleQuestion4]:checked').val());
-    const workStyleInput5 = parseInt($('input:radio[name=workStyleQuestion5]:checked').val());
-    const workStyleInput6 = parseInt($('input:radio[name=workStyleQuestion6]:checked').val());
+    const workStyleInput1 = languageSelector(1);
+    const workStyleInput2 = languageSelector(2);
+    const workStyleInput3 = languageSelector(3);
+    const workStyleInput4 = languageSelector(4);
+    const workStyleInput5 = languageSelector(5);
+    const workStyleInput6 = languageSelector(6);
 
     if (workStyleInput1 === 3) {
       ruby++;
-    } 
-    if (workStyleInput2 && workStyleInput5 === 3 || workStyleInput2 + workStyleInput5 >= 4) {
+    } else if (workStyleInput2 == 3 && workStyleInput4 == 3 || workStyleInput2 + workStyleInput5 >= 4) {
       javascript++;
-    } 
-    if (workStyleInput3 && workStyleInput4 && workStyleInput6 === 3 || workStyleInput3 + workStyleInput4 + workStyleInput6 >= 6) {
+    } else if (workStyleInput3 && workStyleInput4 && workStyleInput6 === 3 || workStyleInput3 + workStyleInput4 + workStyleInput6 >= 6) {
       csharp++;
-    } 
+    } else {
+      anything++;
+    }
     console.log('javascript1>' + javascript);
     console.log('ruby1>' + ruby);
     console.log('csharp1>' + csharp);
