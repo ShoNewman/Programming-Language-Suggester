@@ -9,6 +9,9 @@ $(document).ready(function() {
     event.preventDefault();
     $('#personality').show();
     $('#workStyle').hide();
+
+    const workStyleInput1 = $('input:radio[name=ws1input1]:checked').val();
+
   })
 
   // Personality Questions
