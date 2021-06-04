@@ -1,3 +1,6 @@
 #personality, #spiritAnimal, #personalInfo, #results {
   display: none;
 }
+#results div {
+  display: none;
+}
