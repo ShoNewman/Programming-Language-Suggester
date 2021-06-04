@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Language Suggester</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="jumbotron">What Programming Language Suits You Best?</h1>
+  <p>Answer the question below to find out your perfect match!</p>
+
+  <form>
+    <div id="workStyle">
+      <h2>What Best Describes Your Workstyle?</h2>
+      <div class="workStyleQuestion">
+        <h3>I am go-getter and love to be the one that people go to for know-how!</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+      <div class="workStyleQuestion">
+        <h3>I am a perfectionist and don't feel comfortable attempting something unless I know everyting about it first.</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+      <div class="workStyleQuestion">
+        <h3>I like to get things done and be ahead of the deadline, even if its not perfect, as long as it works that's all that matters to me.</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+      <div class="workStyleQuestion">
+        <h3>I work to live, not live to work. I like to put my 40hours and enjoy my life. Don't ask me to stay late because I won't.</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="personailty">
+      <h2>What Best Describes Your Personality?</h2>
+      <div class="personalityQuestion">
+        <h3>I am a people pleaser, I don't like when I am not liked, and I strive to be the most liked person in the room</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+      <div class="personalityQuestion">
+        <h3>I perfer to keep to myself and interact with people as little as possible. I not a people-person by any means.</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+      <div class="personalityQuestion">
+        <h3>I am a team player but am not afraid to speak my mind when I know I am right about something or call someone out when they are wrong!</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+      <div class="personalityQuestion">
+        <h3>I like to be in charge, I don't hesitate in a group to step up and lead. I can be bossy and want things my way or the highway but I find that people tend to respect me for that.</h3>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="1">
+          <label class="form-check-label" for="question1Input1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input1" value="2">
+          <label class="form-check-label" for="question1Input2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input3" value="3">
+          <label class="form-check-label" for="question1Input3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="question1Input4" value="4">
+          <label class="form-check-label" for="question1Input4">4</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="spirtAnimal">
+      <div class="form-group">
+        <label for="spirtAnimal">What is your spirit animal?</label>
+        <select class="form-control" id="personalityQuestion1">
+          <option>Mongoose</option>
+          <option>Sloth</option>
+          <option>Elephant</option>
+          <option>Pekingese</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="personalInfo">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" id="firstNameInput" placeholder="First Name">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="lastName" class="form-control" id="lastNameInput" placeholder="Last Name">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="emailInput" placeholder="Email Address">
+        <small id="emailHelp" class="form-text text-muted">We will email you a copy of the results.</small>
+      </div>
+    </div>
+  </form>
+</div> 
+</body>
+</html>
