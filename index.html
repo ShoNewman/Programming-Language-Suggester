@@ -15,8 +15,9 @@
   <h1 class="jumbotron">What Programming Language Suits You Best?</h1>
   <p>Answer the question below to find out your perfect match!</p>
 
-  <form>
-    <div id="workStyle">
+  
+  <div id="workStyle">
+    <form id="workStyleForm">
       <h2>What Best Describes Your Workstyle?</h2>
       <div class="workStyleQuestion">
         <h3>I am go-getter and love to be the one that people go to for know-how!</h3>
@@ -94,9 +95,12 @@
           <label class="form-check-label" for="question1Input4">4</label>
         </div>
       </div>
-    </div>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+  </div>
 
-    <div id="personailty">
+  <div id="personality">
+    <form id="personalityForm">
       <h2>What Best Describes Your Personality?</h2>
       <div class="personalityQuestion">
         <h3>I am a people pleaser, I don't like when I am not liked, and I strive to be the most liked person in the room</h3>
@@ -174,9 +178,12 @@
           <label class="form-check-label" for="question1Input4">4</label>
         </div>
       </div>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
     </div>
 
-    <div id="spirtAnimal">
+  <div id="spiritAnimal">
+    <form id="spiritAnimalForm">
       <div class="form-group">
         <label for="spirtAnimal">What is your spirit animal?</label>
         <select class="form-control" id="personalityQuestion1">
@@ -186,9 +193,12 @@
           <option>Pekingese</option>
         </select>
       </div>
-    </div>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+  </div>
 
-    <div id="personalInfo">
+  <div id="personalInfo">
+    <form id="personalInfoForm">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -205,8 +215,18 @@
         <input type="email" class="form-control" id="emailInput" placeholder="Email Address">
         <small id="emailHelp" class="form-text text-muted">We will email you a copy of the results.</small>
       </div>
-    </div>
-  </form>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+  </div>
+
 </div> 
 </body>
 </html>
+
+<!-- To do list
+-Make divs appear sequentially after hitting submit button
+-set JS so that input from forms results in a programming selection
+-use jQeury to add animation effects
+-Use css to sytle page
+
+-->
