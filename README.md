@@ -25,9 +25,8 @@ _This browser application collects information about the user's personality and 
 
 ## Known Bugs
 
-* _About section collumns overlap each other if you decrease your browser window size_
-* _Email address in sidebar gets cut off if browser window size is decreased_
-* _Side navigation bar overlaps content if browser window is too large_
+* _You can click next without changing any of the radio button selections_
+* _Styling of results page is being overwritten by another style_
 
 ## License
 
