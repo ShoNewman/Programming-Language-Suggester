@@ -11,6 +11,16 @@ function personalitySelector(personalityNum) {
   return parseInt($('input:radio[name=personalityQuestion1'+ personalityNum + ']:checked').val());
 }
 
+if (javascript > ruby && javascript > csharp) {
+  $('#javascript').show();
+} else if (ruby > javascript && ruby > csharp) {
+  $('#ruby').show();
+} else if (csharp > ruby && csharp > javascript) {
+  $('#csharp').show();
+} else {
+  $('#anything').show();
+}
+
 // User Interface Logic
 $(document).ready(function() {
   // Work Style Questions
@@ -23,12 +33,6 @@ $(document).ready(function() {
     $('#spiritAnimal').show();
     $('#personality').hide();
   })
-
-
-  // $('#next1').click(function() {
-  //   $('#results').show();
-  //   $('#workStyle').hide();
-  // })
 
   $('form').submit(function(event) {
     event.preventDefault();
@@ -49,9 +53,6 @@ $(document).ready(function() {
     } else {
       anything++;
     }
-    console.log('javascript>' + javascript);
-    console.log('ruby>' + ruby);
-    console.log('csharp>' + csharp);
 
     const personalityInput1 = personalitySelector(1);
     const personalityInput2 = personalitySelector(2);
@@ -81,26 +82,11 @@ $(document).ready(function() {
     } else {
       anything++;
     }
-
-    if (javascript > ruby && javascript > csharp) {
-      $('#javascript').show();
-    } else if (ruby > javascript && ruby > csharp) {
-      $('#ruby').show();
-    } else if (csharp > ruby && csharp > javascript) {
-      $('#csharp').show();
-    } else {
-      $('#anything').show();
-    }
-    console.log('javascript1>' + javascript);
-    console.log('ruby1>' + ruby);
-    console.log('csharp1>' + csharp);
-
  
     $('#personality').hide();
     $('#workStyle').hide();
     $('#spiritAnimal').hide();
     $('#results').show();
-  
 
   });
 
