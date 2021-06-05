@@ -1,6 +1,108 @@
-#personality, #spiritAnimal, #personalInfo, #results {
+/* Main styles */
+.container {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 10%;
+}
+.questionaireContainer {
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 10%;
+  border-radius: 2em;
+}
+.questionaireContainer h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 10%;
+  padding-top: 5%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  padding: 5%;
+  text-align: center;
+  border: solid 2px rgb(146, 140, 140); 
+}
+form div div {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 3%;
+}
+form div div h3 {
+  margin-bottom: 2%;
+  font-size: x-large;
+}
+.form-check-label {
+  font-size: large;
+  font-weight: bold;
+}
+.jumbotron {
+  background: none;
+  text-align: center;
+  text-shadow: 0 0 3px #FF0000;
+}
+/* Work style */
+#workStyle {
+  background-color: rgb(144, 206, 144, 0.5);
+}
+#workStyle h2 {
+  background-color: rgb(71, 104, 71);
+  color: white;
+}
+
+/* Personality */
+
+/* Work style */
+#personality {
+  background-color: rgba(108, 103, 148, 0.5);
+}
+#personality h2 {
+  background-color: rgba(76, 65, 158, 0.5);
+  color: white;
+}
+
+/* Spirit Animal */
+#spiritAnimal {
+  background-color: rgba(211, 95, 166, 0.5);
+}
+#spiritAnimal h2 {
+  background-color: rgba(165, 38, 116, 0.5);
+  color: white;
+}
+
+/* Results  */
+#personality, #spiritAnimal, #results {
   display: none;
+}
+.container #results {
+  border: none;
+  border-radius: 0;
 }
 #results div {
   display: none;
+  background-color:  rgb(208, 211, 15);
+  text-align: center;
+  border: none;
+}
+#results h1 {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+
+/* Next Button */
+.container #next1, .container #next2 {
+  border: solid 2px black;
+  display: block;
+  background-color: rgb(90, 81, 81);
+  color: white;
+  padding: 1%;
+  width: 10%;
+  margin: auto;
+  text-align: center;
+  font-weight: bolder;
+  box-shadow: 2px 2px grey;
+  cursor: pointer;
+}
+#submit {
+  margin: auto;
+  margin-top: 5%;
+  display: block;
 }
