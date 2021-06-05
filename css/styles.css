@@ -71,19 +71,18 @@ form div div h3 {
 #personality, #spiritAnimal, #results {
   display: none;
 }
-.container #results {
-  border: none;
-  border-radius: 0;
-}
 #results div {
   display: none;
   background-color:  rgb(208, 211, 15);
   text-align: center;
-  border: none;
+  border-radius: 15px;
 }
 #results h1 {
   margin-bottom: 10%;
   text-align: center;
+}
+#results h2 {
+  border-radius: 15px;;
 }
 
 
