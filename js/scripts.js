@@ -8,23 +8,13 @@ function workStyleSelector(workStyleNum) {
   return parseInt($('input:radio[name=workStyleQuestion'+ workStyleNum + ']:checked').val());
 }
 function personalitySelector(personalityNum) {
-  return parseInt($('input:radio[name=personalityQuestion1'+ personalityNum + ']:checked').val());
+  return parseInt($('input:radio[name=personalityQuestion'+ personalityNum + ']:checked').val());
 }
 
-if (javascript > ruby && javascript > csharp) {
-  $('#javascript').show();
-} else if (ruby > javascript && ruby > csharp) {
-  $('#ruby').show();
-} else if (csharp > ruby && csharp > javascript) {
-  $('#csharp').show();
-} else {
-  $('#anything').show();
-}
 
 // User Interface Logic
 $(document).ready(function() {
-  // Work Style Questions
-  
+
   $('#next1').click(function() {
     $('#personality').show();
     $('#workStyle').hide();
@@ -37,14 +27,14 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
 
-    const workStyleInput1 = workStyleSelector(1);
-    const workStyleInput2 = workStyleSelector(2);
-    const workStyleInput3 = workStyleSelector(3);
-    const workStyleInput4 = workStyleSelector(4);
-    const workStyleInput5 = workStyleSelector(5);
-    const workStyleInput6 = workStyleSelector(6);
+    let workStyleInput1 = workStyleSelector(1);
+    let workStyleInput2 = workStyleSelector(2);
+    let workStyleInput3 = workStyleSelector(3);
+    let workStyleInput4 = workStyleSelector(4);
+    let workStyleInput5 = workStyleSelector(5);
+    let workStyleInput6 = workStyleSelector(6);
 
-    if (workStyleInput1 === 3) {
+    if (workStyleInput1 == 3) {
       ruby++;
     } else if (workStyleInput2 == 3 && workStyleInput4 == 3 || workStyleInput2 + workStyleInput5 >= 4) {
       javascript++;
@@ -53,15 +43,16 @@ $(document).ready(function() {
     } else {
       anything++;
     }
+    console.log('work' + workStyleInput2 + workStyleInput4)
 
-    const personalityInput1 = personalitySelector(1);
-    const personalityInput2 = personalitySelector(2);
-    const personalityInput3 = personalitySelector(3);
-    const personalityInput4 = personalitySelector(4);
-    const personalityInput5 = personalitySelector(5);
-    const personalityInput6 = personalitySelector(6);
+    let personalityInput1 = personalitySelector(1);
+    let personalityInput2 = personalitySelector(2);
+    let personalityInput3 = personalitySelector(3);
+    let personalityInput4 = personalitySelector(4);
+    let personalityInput5 = personalitySelector(5);
+    let personalityInput6 = personalitySelector(6);
 
-    if (personalityInput2 === 3) {
+    if (personalityInput2 == 3) {
       ruby++;
     } else if (personalityInput1 && personalityInput3 && personalityInput5 === 3 || personalityInput1 + personalityInput3 + personalityInput5 >= 6) {
       javascript++;
@@ -70,8 +61,9 @@ $(document).ready(function() {
     } else {
       anything++;
     }
+  console.log('person' + personalityInput1 + personalityInput3 + personalityInput5)
 
-   let spiritAnimalSelector = $('spiritAnimalQuestion').val();
+   let spiritAnimalSelector = parseInt($('#spiritAnimalQuestion').val());
 
     if (spiritAnimalSelector === 4) {
       ruby++;
@@ -82,60 +74,48 @@ $(document).ready(function() {
     } else {
       anything++;
     }
+    console.log(spiritAnimalSelector)
+
+    if (javascript >= ruby && javascript >= csharp) {
+      $('#javascript').show();
+      $('#ruby').hide();
+      $('#csharp').hide();
+      $('#anything').hide();
+    } else if (ruby >= javascript && ruby >= csharp) {
+      $('#javascript').hide();
+      $('#ruby').show();
+      $('#csharp').hide();
+      $('#anything').hide();
+    } else if (csharp >= ruby && csharp >= javascript) {
+      $('#javascript').hide();
+      $('#ruby').hide();
+      $('#csharp').show();
+      $('#anything').hide();
+    } else {
+      $('#javascript').show();
+      $('#ruby').hide();
+      $('#csharp').hide();
+      $('#anything').hide();
+    }
  
     $('#personality').hide();
     $('#workStyle').hide();
     $('#spiritAnimal').hide();
-    $('#results').show();
-
+    $('#results').show();   
+  
   });
 
- 
-  // Personality Questions
-  // $('form#personalityForm').submit(function(event) {
-  //   event.preventDefault();
-  //   $('#spiritAnimal').show();
-  //   $('#personality').hide();
+  $('#return').click(function() {
+    ruby = 0;
+    javascript = 0;
+    csharp = 0;
+    anything = 0;
 
-  //   const personalityInput1 = parseInt($('input:radio[name=personalityQuestion1]:checked').val());
-  //   const personalityInput2 = parseInt($('input:radio[name=personalityQuestion2]:checked').val());
-  //   const personalityInput3 = parseInt($('input:radio[name=personalityQuestion3]:checked').val());
-  //   const personalityInput4 = parseInt($('input:radio[name=personalityQuestion4]:checked').val());
-  //   const personalityInput5 = parseInt($('input:radio[name=personalityQuestion5]:checked').val());
-  //   const personalityInput6 = parseInt($('input:radio[name=personalityInput6]:checked').val());
+    $('#personality').hide();
+    $('#workStyle').show();
+    $('#spiritAnimal').hide();
+    $('#results').hide();   
+  })
 
-  //   if (personalityInput1 && personalityInput3 && personalityInput5 === 3 || personalityInput1 + personalityInput3 >= 4) {
-  //     javascript++;
-  //   } else {
-  //     javascript--;
-  //   }
-  //   if (personalityInput2 === 3) {
-  //     ruby++;
-  //   } else {
-  //     ruby--;
-  //   }
-  //   if (personalityInput4 && personalityInput6 === 3 || personalityInput4 + personalityInput6 >= 6) {
-  //     csharp++;
-  //   } else {
-  //     csharp--;
-    // }
-
-  // })
-
-  // // Spirit Animal Questions
-  // $('form#spiritAnimalForm').submit(function(event) {
-  //   event.preventDefault();
-  //   $('#personalInfo').show();
-  //   $('#spiritAnimal').hide();
-  // })
-
-  // // Personal Info Questions
-  // $('form#personalInfoForm').submit(function(event) {
-  //   event.preventDefault();
-  //   $('#results').show();
-  //   $('#personalInfo').hide();
-  // })
-
-  // results
 })
 

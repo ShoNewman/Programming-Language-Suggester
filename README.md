@@ -19,14 +19,20 @@ _This browser application collects information about the user's personality and 
 
 ## Setup/Installation Requirements
 
+
 * _Navigate to: [Programing Language Suggester](https://shonewman.github.io/programming-language-suggester/index.html "Programming Language Suggester")_
-* _Or clone this [Repository](https://github.com/ShoNewman/programming-language-suggester.git) to your computer_
-* _Open index.html in browser of your choosing_
+* _To clone and run this application you will need to have [Git](https://git-scm.com/"Git" "Git") installed on your system_
+* _Then clone this repository [Repository](https://github.com/ShoNewman/programming-language-suggester.git) to your computer using the following commands in your terminal:_
+- Clone repository to your computer:
+  - $ git clone https://github.com/ShoNewman/programming-language-suggester.git
+- Open the index.html in your browser
+  - $ open index.html
 
 ## Known Bugs
 
 * _You can click next without changing any of the radio button selections_
 * _Styling of results page is being overwritten by another style_
+* _Return to Begining button takes you back to first page as expected but when you change the inputs and resubmit, the old values from the last submit are being cached, so changing the 
 
 ## License
 
